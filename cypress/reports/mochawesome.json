@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-07-15T07:11:58.966Z",
+    "end": "2025-07-15T07:12:11.618Z",
+    "duration": 12652,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "21e2d615-4c72-4bf7-8453-0db8a8fd4ce4",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login.spec.js",
+      "file": "cypress\\e2e\\login.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "364ac0c3-0894-401b-b395-7c0624369a36",
+          "title": "Login Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should login successfully with valid credentials",
+              "fullTitle": "Login Tests should login successfully with valid credentials",
+              "timedOut": null,
+              "duration": 6776,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.fillUsername('tomsmith');\nloginPage.fillPassword('SuperSecretPassword!');\nloginPage.submit();\nloginPage.getSuccessMessage().should('contain', 'You logged into a secure area!');",
+              "err": {},
+              "uuid": "4bc7d699-0122-466e-b236-3a9ef982fd2f",
+              "parentUUID": "364ac0c3-0894-401b-b395-7c0624369a36",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should fail login with invalid username",
+              "fullTitle": "Login Tests should fail login with invalid username",
+              "timedOut": null,
+              "duration": 2022,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.fillUsername('invalidUser');\nloginPage.fillPassword('SuperSecretPassword!');\nloginPage.submit();\nloginPage.getErrorMessage().should('contain', 'Your username is invalid!');",
+              "err": {},
+              "uuid": "e5c6c523-1fde-448a-94e3-08a6cdb29381",
+              "parentUUID": "364ac0c3-0894-401b-b395-7c0624369a36",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should fail login with invalid password",
+              "fullTitle": "Login Tests should fail login with invalid password",
+              "timedOut": null,
+              "duration": 1878,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.fillUsername('tomsmith');\nloginPage.fillPassword('WrongPassword');\nloginPage.submit();\nloginPage.getErrorMessage().should('contain', 'Your password is invalid!');",
+              "err": {},
+              "uuid": "ed4cb4d1-6204-4787-97ad-2fd4f19163da",
+              "parentUUID": "364ac0c3-0894-401b-b395-7c0624369a36",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should display error message when both fields are wrong",
+              "fullTitle": "Login Tests should display error message when both fields are wrong",
+              "timedOut": null,
+              "duration": 1849,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.fillUsername('baduser');\nloginPage.fillPassword('badpassword');\nloginPage.submit();\nloginPage.getErrorMessage().should('contain', 'Your username is invalid!');",
+              "err": {},
+              "uuid": "6fd55ee7-aa95-4e5c-9856-9c7436334f5e",
+              "parentUUID": "364ac0c3-0894-401b-b395-7c0624369a36",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4bc7d699-0122-466e-b236-3a9ef982fd2f",
+            "e5c6c523-1fde-448a-94e3-08a6cdb29381",
+            "ed4cb4d1-6204-4787-97ad-2fd4f19163da",
+            "6fd55ee7-aa95-4e5c-9856-9c7436334f5e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12525,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
