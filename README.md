@@ -46,7 +46,7 @@ README.md                 -> Project overview and instructions
 
 1. Clone or extract the project and navigate to the folder:
 
-cd <directory name>
+cd directoryname
 
 2. Install dependencies:
 
